@@ -27,3 +27,12 @@ In this application we can: <br>
 ## Frontend startup
 To start the frontend application, please open a terminal and write **npm run start** <br/>
 The application is running on port 3000 and is connected with the backend with *axios*.
+
+## Project pictures
+
+![home_page](https://i.ibb.co/BL6Mp9W/Screenshot-76.png)
+![video_games](https://i.ibb.co/MnJzqWQ/Screenshot-78.png)
+![details_page](https://i.ibb.co/P4K9frc/Screenshot-80.png)
+![payment](https://i.ibb.co/5hfHpcS/Screenshot-82.png)
+
+In order for stripe to always work, use these card number: **4242 4242 4242 4242**
