@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add VideoGame</title>
+</head>
+<body>
+<form th:action="@{/videoGames}" method="post">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Name" th:field="${videoGame.name}"/><br>
+    <label>Price</label>
+    <input type="number" placeholder="Price" name="price" required th:field="${videoGame.price}"/><br>
+    <label>Link</label>
+    <input type="text" name="name" th:field="${videoGame.link}"/><br>
+    <label>Description</label>
+    <textarea name="description" th:field="${videoGame.description}"></textarea><br>
+    <label>Category</label>
+    <select name="category" th:field="${videoGame.categoryId}">
+        <option th:each="category :${categories}" th:value="${category.getId()}">
+            <span th:text="${category.getName()}"> </span>
+        </option>
+    </select><br>
+    <label>Manufacturer</label>
+    <select name="manufacturer" th:field="${videoGame.manufacturerId}">
+        <option th:each="manufacturer :${manufacturers}" th:value="${manufacturer.getId()}">
+            <span th:text="${manufacturer.getName()}"> </span>
+        </option>
+    </select><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

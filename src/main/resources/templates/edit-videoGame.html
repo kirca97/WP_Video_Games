@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit VideoGame</title>
+</head>
+<body>
+<form th:action="@{/videoGames/editvideogame}" method="post">
+    <input type="text" name="id" disabled readonly th:field="${videoGame.id}"/>
+    <input type="text" name="price" required th:field="${videoGame.price}"/>
+    <input type="text" name="name" th:field="${videoGame.name}"/>
+    <input type="text" name="name" th:field="${videoGame.link}"/>
+    <textarea name="description" th:field="${videoGame.description}"></textarea>
+    <select name="category" th:field="${videoGame.categoryId}">
+        <option th:each="category :${categories}" th:value="${category.getId()}">
+            <span th:text="${category.getName()}"> </span>
+        </option>
+    </select>
+    <select name="manufacturer" th:field="${videoGame.manufacturerId}">
+        <option th:each="manufacturer :${manufacturers}" th:value="${manufacturer.getId()}">
+            <span th:text="${manufacturer.getName()}"> </span>
+        </option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
