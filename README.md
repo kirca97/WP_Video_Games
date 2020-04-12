@@ -15,6 +15,7 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 
 We use hibernate, so the tables will be created automatically from the models. <br/>
 Now, you can start the application by running **DemoApplication.java** <br/>
+The application is running on port 8080. <br/>
 In this application we can: <br>
 - see all video games on **http://localhost:8080/videoGames**. <br/>
 - create video games on **http://localhost:8080/videoGames/add**. <br/>
@@ -24,4 +25,5 @@ In this application we can: <br>
 
 
 ## Frontend startup
-To start the frontend application, please open a terminal and write **npm run start**
+To start the frontend application, please open a terminal and write **npm run start** <br/>
+The application is running on port 3000 and is connected with the backend with *axios*.
